@@ -1,0 +1,19 @@
+<h1>Hey</h1>
+
+<a href="/guesses/new">
+Add a New Guess
+</a>
+
+<ul>
+  <% @list_of_guesses.each do |guess| %>
+  <li>
+    <%= guess.first_number %>
+    <%= guess.second_number %>
+    <%= guess.third_number %>
+
+    <a href="/guesses/<%=guess.id%>"
+    See details
+  </a>
+  </li>
+  <%end %>
+</ul>
